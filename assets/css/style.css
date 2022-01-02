@@ -20,6 +20,7 @@
     :root {
         --heading-font-size: 2.5rem;
         --normal-font-size: 1.275rem;
+        --smaller-font-size: 1rem;
     }
 }
 
@@ -53,7 +54,6 @@ img {
 
 /* === LAYOUT === */
 .bd-grid {
-    max-width: 1124px;
     display: grid;
     grid-template-columns: 100%;
     width: calc(100% - 4rem);
@@ -148,4 +148,54 @@ img {
 .home__medsos ul li:hover {
     border-color: var(--hover-color);
     color: var(--hover-color);
+}
+
+/* === DESKTOP DESIGN === */
+@media screen and (min-width: 1024px) {
+    body {
+        background-image: url('../images/bg-desktop.svg');
+    }
+
+    .bd-grid {
+        width: calc(100% - 8rem);
+        margin: 2rem 4rem;
+    }
+
+    .nav {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .nav__logo img {
+        max-width: 180px;
+    }
+
+    .home {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .home__image {
+        padding: 0;
+    }
+
+    .home__image img {
+        width: auto;
+    }
+
+    .home__text {
+        padding: 3rem;
+        text-align: left;
+    }
+
+    .home__button {
+        display: inline-block;
+        padding: .7rem 4rem;
+    }
+
+    .home__medsos {
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+    }
 }
